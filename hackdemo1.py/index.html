@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScamCheck | Opportunity verification</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark">S</span><span>ScamCheck</span></a>
+    <div class="topbar-note"><span class="pulse"></span> Explainable opportunity verification</div>
+    <span class="prototype-tag">PROTOTYPE</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">FOR FIRST-TIME JOB SEEKERS</div>
+      <h1>Before you say yes,<br><em>check the signal.</em></h1>
+      <p class="hero-copy">Paste an internship or job message. ScamCheck spots the pressure tactics, asks for proof, and explains every warning in plain language.</p>
+    </section>
+
+    <section class="workspace" aria-label="ScamCheck analyzer">
+      <div class="input-panel">
+        <div class="panel-heading"><div><span class="step">01</span><h2>Drop in the opportunity</h2></div><span class="secure-label">LOCAL ANALYSIS</span></div>
+        <div class="sample-row"><span>Try a demo message</span><button class="sample-btn" data-sample="scam">Registration fee scam</button><button class="sample-btn" data-sample="safe">Professional offer</button></div>
+        <label class="field-label" for="message">Message, email, or offer details <span>required</span></label>
+        <textarea id="message" placeholder="Paste the full message here...&#10;&#10;Include the sender's wording, promises, payment requests, links, and anything else you received."></textarea>
+        <div class="input-meta"><span id="char-count">0 characters</span><span>Text stays on this device</span></div>
+        <div class="details-grid">
+          <div><label class="field-label" for="sender">Sender email <span>optional</span></label><input id="sender" type="email" placeholder="recruiter@company.com"></div>
+          <div><label class="field-label" for="company">Claimed company <span>optional</span></label><input id="company" type="text" placeholder="Company name"></div>
+        </div>
+        <div><label class="field-label" for="url">Link received <span>optional</span></label><input id="url" type="url" placeholder="https://..."></div>
+        <button class="analyze-btn" id="analyze"><span>Analyze opportunity</span><span class="arrow">&#8594;</span></button>
+        <p class="privacy-note">ScamCheck is an educational prototype. A low score is not a guarantee of legitimacy.</p>
+      </div>
+
+      <div class="result-panel" id="result-panel">
+        <div class="panel-heading"><div><span class="step">02</span><h2>Understand the signal</h2></div><span class="engine-label">RULE ENGINE v1</span></div>
+        <div class="empty-state" id="empty-state"><div class="empty-icon">&#10003;</div><h3>Your explanation will appear here</h3><p>We’ll show a risk score, the exact phrases that triggered it, and what to do next.</p><div class="signal-legend"><span><i class="dot dot-green"></i> Low</span><span><i class="dot dot-amber"></i> Medium</span><span><i class="dot dot-red"></i> High</span></div></div>
+        <div class="results hidden" id="results">
+          <div class="risk-header"><div><span class="risk-kicker">OVERALL ASSESSMENT</span><div class="risk-label" id="risk-label">High risk</div><p id="summary"></p></div><div class="score-wrap"><div class="score" id="score">0</div><span>/ 100</span></div></div>
+          <div class="meter"><div id="meter-fill"></div><span class="meter-marker marker-one"></span><span class="meter-marker marker-two"></span></div>
+          <div class="meter-labels"><span>Lower risk</span><span>Higher risk</span></div>
+          <div class="findings-heading"><h3>What we noticed</h3><span id="finding-count">0 signals</span></div>
+          <div class="findings" id="findings"></div>
+          <div class="next-step"><span class="next-icon">&#8599;</span><div><strong>Best next step</strong><p id="advice">Verify this opportunity through the company’s official careers page.</p></div></div>
+          <button class="reset-btn" id="reset">&#8592; Check another opportunity</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works"><div class="section-kicker">A BETTER KIND OF YES</div><h2>Not just a verdict.<br><em>A lesson in what to look for.</em></h2><div class="principles"><div><b>01</b><h3>Spot the pattern</h3><p>Payment asks, false urgency, and unrealistic promises surface immediately.</p></div><div><b>02</b><h3>See the evidence</h3><p>Every warning cites the exact phrase that caused the signal.</p></div><div><b>03</b><h3>Know your next move</h3><p>Get a practical action before you reply, click, or share details.</p></div></div></section>
+  </main>
+  <footer><span>ScamCheck</span><span>Built to make opportunity verification less intimidating.</span><span>2026 / Prototype</span></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
